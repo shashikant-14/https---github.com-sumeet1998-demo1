@@ -1,0 +1,78 @@
+<div class="container-fluid" style="height: 100vh;">
+    <!-- nav bar -->
+    <div class="row sticky-top d-flex justify-content-between align-items-center" style="height: 80px;background: whitesmoke;">
+        <div class="col-6 d-flex justify-content-center" 
+            style="font-size: 30px;font-family: cursive;color: black;margin-left: 25px;">𝕴𝖓𝖘𝖙𝖆𝖌𝖗𝖆𝖒_𝕲𝖆𝖑𝖑𝖊𝖗𝖞</div>
+        <div class="col-2">
+            <button class="btn btn-primary btn-small" (click)="logoutprocess()">Logout</button>
+        </div>
+    </div>
+    <!-- main body -->
+    <div class="container">
+
+      <div style="padding: 5rem 0;">
+  
+          <div style="float: left;
+            width: calc(33.333% - 1rem);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right:1rem;
+            margin-left: 6rem;">
+            <img src="https://picsum.photos/id/1033/300/267" alt="" style="border-radius: 50%;">
+  
+          </div>
+  
+          <div>
+            <h1 style=" display: inline-block;font-size: 3.2rem;font-weight: 300;">
+              #Instagram_Gallery
+            </h1>
+           </div>
+          <div style="font-size: 1rem; font-weight: 400; line-height: 1.5;
+             margin-top: 2.3rem;">
+              <p><span>MY Galleary<br>
+              </span> 📷✈️🏕🤳</p>
+          </div>
+      </div>
+      <!-- End of profile section -->
+  </div>
+    <div class="row d-flex justify-content-center" >
+        <input type="file">
+        <button class="btn btn-success">upload</button>
+    </div>
+    <br>
+    <hr style="background: black;">
+    <div class="container" >
+        <div class="row d-flex justify-content-center">
+          <div class="col-3" style="margin: 2px;" 
+             *ngFor="let item of list; let index = index">
+            <div  class="row" style="width: 100%;background-color: brown;height: 250px;">
+              <img src="https://picsum.photos/200/10{{ index }}" alt="" 
+              style=" width:100%;height: 100%; object-fit: cover;">
+            </div>
+         </div>
+    
+    
+         <div class="col-3" style="margin: 2px;" 
+             *ngFor="let item of list; let index = index">
+            <div  class="row" style="width: 100%;background-color: brown;height: 200px;">
+              <img src="https://picsum.photos/200/10{{ index }}" alt="" 
+              style=" width:100%;height: 100%; object-fit: cover;">
+            </div>
+         </div>
+    
+    
+         <div class="col-3" style="margin: 2px;" 
+             *ngFor="let item of list; let index = index">
+            <div  class="row" style="width: 100%;background-color: brown;height: 200px;">
+              <img src="https://picsum.photos/200/10{{ index }}" alt="" 
+              style=" width:300px;height: 200px; object-fit: cover;">
+            </div>
+         </div>
+    
+        </div>
+    </div>  
+    
+</div>
+
+

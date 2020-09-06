@@ -1,0 +1,56 @@
+<div class="container-fluid " 
+     style="background: url(https://picsum.photos/id/1050/1100/1000?blur)
+     ;background-repeat: no-repeat;background-position: center;background-size: cover;height: 100%;">
+    <div class="row" style="height: 100px;"></div>   
+    <div class="row d-flex justify-content-center" style="height:30rem;">
+
+        <div class="col-12 col-md-3 " style="box-shadow: 0px 3px 7px 3px black; background:white" >
+          <div class="row d-flex justify-content-center align-items-center" style="height: 80px;font-family: cursive;font-size: 30px;color:black ;"> Instagram Gallary</div>
+
+          
+          <div class="row d-flex justify-content-center" 
+               style="font-size: 20px;font-weight:bolder; 
+               font-family:cursive;
+               ">Login</div>
+
+            <div class="row d-flex justify-content-center flex-column " 
+                 style="padding: 20px; margin-top: 10px;"
+                 [formGroup]="fbFormGroup" >
+
+                 <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                    Enter Valid Credential!!
+                  </div>
+                  
+                <input type="text" placeholder="Enter a username"
+                        class="form-control"
+                        formControlName="username" >
+                <div class="row text-danger" style="font-size: 10px;font-weight: bold; margin-left: 10px;margin-bottom: 10px;"></div>
+                
+                <input type="password" placeholder="Enter a password"
+                        class="form-control"
+                        formControlName="password">
+                <!-- <div>{{ passwordcontrol.valid}}</div> -->
+
+                <div class="row d-flex justify-content-center" style="margin-bottom: 20px;margin-top: 20px;">
+
+                    <button class="btn btn-success" [disabled]="!fbFormGroup.valid" (click)="readfromvalue()">
+                        Login
+                    </button>
+                </div>
+
+                <div class="row mt-1 d-flex justify-content-center">
+                    <div class="col-5"><hr style="color:black"> </div>
+                    <div class="col-2 d-flex justify-content-center">OR</div>
+                    <div class="col-5"><hr style="color: black;"> </div>
+                </div>
+                
+                <div class="row d-flex justify-content-center" style="font-family: cursive;font-size: 15px;margin-bottom: 10px;"><a routerLink="/forgotpass" routerLinkActive="active">forgot password?</a></div>
+
+                <div class="row d-flex justify-content-center" style="margin-top: 10px;">Don't have an account <a routerLink="/signup" routerLinkActive="active">Signup</a></div>
+
+
+            </div>
+          
+        </div>
+    </div>
+</div>
